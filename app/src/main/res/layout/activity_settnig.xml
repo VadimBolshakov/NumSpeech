@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettnigActivity">
+
+            <TextView
+                android:id="@+id/text_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:text="Setting"
+                android:textSize="32sp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="30dp"
+                android:onClick="back"
+                app:layout_constraintRight_toLeftOf="@id/text_setting"
+                app:srcCompat="@drawable/abc_vector_test"
+                app:layout_constraintTop_toTopOf="@+id/text_setting"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_SpeechRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Rate"
+                android:textSize="22sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_setting" />
+
+            <SeekBar
+                android:id="@+id/seekBar_SpeechRate"
+                android:layout_width="256dp"
+                android:layout_height="31dp"
+                android:max="20"
+                android:min="1"
+                android:progress="10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_SpeechRate" />
+
+            <TextView
+                android:id="@+id/text_SpeechRate_num"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:text="10"
+                android:textSize="28sp"
+                app:layout_constraintLeft_toRightOf="@+id/seekBar_SpeechRate"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/seekBar_SpeechRate" />
+
+            <TextView
+                android:id="@+id/text_Pitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Pitch"
+                android:textSize="22sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seekBar_SpeechRate" />
+
+            <SeekBar
+                android:id="@+id/seekBar_Pitch"
+                android:layout_width="256dp"
+                android:layout_height="31dp"
+                android:max="20"
+                android:min="1"
+                android:progress="10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_Pitch" />
+
+            <TextView
+                android:id="@+id/text_Pitch_num"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:text="10"
+                android:textSize="28sp"
+                app:layout_constraintLeft_toRightOf="@+id/seekBar_Pitch"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/seekBar_Pitch" />
+
+            <TextView
+                android:id="@+id/text_delay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Delay"
+                android:textSize="22sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seekBar_Pitch" />
+
+            <SeekBar
+                android:id="@+id/seekBar_delay"
+                android:layout_width="256dp"
+                android:layout_height="31dp"
+                android:max="6"
+                android:min="1"
+                android:progress="3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_delay" />
+
+            <TextView
+                android:id="@+id/text_delay_num"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:text="3"
+                android:textSize="28sp"
+                app:layout_constraintLeft_toRightOf="@+id/seekBar_delay"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/seekBar_delay" />
+
+            <Switch
+                android:id="@+id/switch_no_delay"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:showText="true"
+                android:text="Delay  "
+                android:textSize="22sp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seekBar_delay" />
+
+            <Button
+                android:id="@+id/button_save_seting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="save_setting"
+                android:text="Save setting"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch_no_delay"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
